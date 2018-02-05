@@ -1,0 +1,235 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>SaaS实训平台</title>
+<link rel="stylesheet" type="text/css" href="css/leftNav.css">
+<link rel="stylesheet" href="css/rightNav.css">
+<link rel="stylesheet" href="css/scrollBar.css">
+<link rel="stylesheet" href="css/layer-animate.css">
+<link rel="stylesheet" href="css/v.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+
+<!-- <script type="text/javascript" src="js/scrollBar.js"></script> -->
+<script type="text/javascript" src="js/jquery.scrollTo.min.js"></script>
+<script type="text/javascript" src="js/jquery.eventsource.js"></script>
+<script type="text/javascript" src="js/m.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/Nav.js"></script>
+<script type="text/javascript" src="js/method.js"></script>
+<script type="text/javascript" src="js/ball.js"></script>
+</head>
+<body>
+<!-- loading -->
+<div id="load">
+    <img class="loading" src="images/loading.gif" alt="">
+    <div class="log">
+        <img src="images/logo000.png" alt="">
+        <p>欢迎来到云端实验室</p>
+    </div>
+</div>
+<!-- 页面 -->
+
+    <input id="user" type="hidden" value="">
+    <!-- 左侧滑动栏 -->
+	<div class="nav">
+		<div class="loginbar">
+			<div class="portrait">
+				<img class="portrait_img" src="images/timg.jpg" alt="">
+			</div>
+			<p id="name">张 三</p>
+		</div>
+		<div class="nav-top">
+			<div id="mini"><img class="overd" src="images/mini1.png" ></div>
+            <div id="mini_over"><img class="mini_over_img" src="images/over2.png" ></div>
+            <div id="mini_clock">
+                <!-- <img class="mini_clock_img" src="images/big_clock.gif" alt=""> -->
+                <!-- mini时间 -->
+                <span class="time_name">
+                    <strong id="mini_minute_show">00:</strong>
+                </span>
+            </div>
+			<div class="mini_right">
+				<div class="over">结束实验</div>
+				<p class="test_direction">实验方向：<span class="test_name">大数据HCIE</span></p>
+				<p class="test_time">实验时间：
+					<span class="time_name">
+						<strong id="hour_show">1:</strong>
+			    		<strong id="minute_show">00:</strong>
+			    		<strong id="second_show">00</strong>
+					</span>
+				</p>
+			</div>
+			
+		</div>
+		<ul class="nav_ul">
+			<li class="nav-item nav_sign" id="topology">
+				<a href="javascript:;">
+                    <i class="icon_1"></i>
+                    <span>实验拓扑图</span>
+                </a>
+			</li>
+			<!-- <li class="nav-item">
+				<a href="javascript:;">
+                    <i class="icon_s"></i>
+                    <span>大数据开发环境</span>
+                </a>
+			</li> -->
+		</ul>
+
+        <!-- loog -->
+
+	</div>
+
+	<!-- 中间内容 -->
+	<div class="centre">
+        <div id="show" class="hied">
+            <iframe id="contentFrame" src="" frameborder="0" ></iframe>
+            <!-- <iframe id="contentFrame" src="bigdata-hcnp.svg" frameborder="0"></iframe> -->
+           <!-- <img src="images/拓扑图1920×1080.png" alt=""> -->
+           
+        </div>
+	</div>
+                    
+	<!-- 右侧浮动窗口 -->
+
+            <div id="main">
+                <!-- 工具栏 -->
+                <div class="toolbar">
+                    <!-- 滑动按钮 -->
+                    <div id="js-btn-icon" class="btn" class=""></div>
+                    <!-- 工具列表 -->
+                    <ul class="toolbar_list">
+                        <li class="magnify">
+                            <div class="full_screen l"></div>
+                            <div class="toolbar_title iconfont">切换全屏</div>
+                        </li>
+
+                        <li class="mini_screen">
+                            <div class="shrink l"></div>
+                            <div class="toolbar_title iconfont">退出全屏</div>
+                        </li>
+
+                        <li>
+                            <div class="screenshot l"></div>
+                            <div class="screenshot_title iconfont">截屏</div>
+                        </li>
+
+                        <li>
+                            <div class="copy l"></div>
+                            <div class="copy_title iconfont">复制</div>
+                        </li>
+
+                        <li>
+                            <div class="paste l"></div>
+                            <div class="paste_title iconfont">粘贴</div>
+                        </li>
+
+                        <li>
+                            <div class="share l"></div>
+                            <div class="share_title iconfont">屏幕共享</div>
+                        </li>
+
+                        <li>
+                            <div class="download l"></div>
+                            <div class="download_title iconfont">代码下载</div>
+                        </li>
+
+                        <li>
+                            <div class="evaluate l"></div>
+                            <div class="evaluate_title iconfont">系统评价</div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- 弹框盒子 -->
+                <!-- 导航栏 -->
+                <div id="box">        
+                    <div class="right_nav">
+                        <ul class="nav-list">
+                            <li id="course" class="active" title="aaaaa"><b>课 程</b></li>
+                            <li id="video"><b>视 频</b></li>
+                            <li id="rq"><b>在线问答</b></li>
+                        </ul>
+                    </div>
+
+                    <!-- 内容 -->
+                    <div id="content">
+
+                        <!-- 课程 -->
+                        <div id="tab-course" class="con" style="display: block;">
+                            <!-- <iframe src="" frameborder="0" target="_blank" id="coursewareFile"></iframe> -->
+                            <div class="sc">
+                                <div class="list">
+                                    <ul class="list_s"></ul>
+                                </div>
+                                <div class="shouce">
+                                    <div class="title">
+                                        <h2 class="name"></h2>
+                                        <h4 class="intro"></h4>
+                                    </div>
+                                    <div class="qbbz">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 视频 -->
+                        <div id="tab-video" class="con">
+                            视频
+                        </div>
+
+                        <!-- 二维码 -->
+                        <div id="qr" class="con">
+                            <div class="attention">
+                                <p>扫码关注！</p>
+                                <div class="img"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    
+
+    <!-- 悬浮进度球 -->
+    <div id="demo">
+        <div id="innerht">
+            <canvas id="c"></canvas>
+        </div>
+    </div>
+    <input type="hidden" id="r" min="0" max="100" step="1" value="40">
+    
+    <!-- 共享桌面-弹框 -->
+    <div class="share_page" id="share_page">
+        <div class="share_titel" id="share_titel">
+            <span class="desktop">共享桌面</span>
+            <span class="share_close">X</span>
+        </div>
+        <!-- 只读模式 -->
+        <div class="read">
+            <span class="symbol"></span><span class="pattern">只读模式</span>
+            <p>复制一下链接发送给朋友，让他围观您的操作</p>
+            <input class="read_url" value="">
+        </div>
+        <!-- 协作模式 -->
+        <div class="write">
+            <span class="symbol"></span><span class="pattern">协作模式</span>
+            <p>复制一下链接发送给朋友，邀请他远程协助，与您共同完成实验任务</p>
+            <input class="write_url" value="">
+        </div>
+    </div>
+
+</body>
+<script>
+    // $(function(){
+    //     var gao = $(window).height();
+    //     $('#ipad').ipad({
+    //         width: 480,
+    //         height: gao,
+    //         limitedWidth: 480,
+    //         limitedHeight: 660,
+    //         // dragLimited: true
+    //     });
+    //     ipadScrollBar();
+    // })
+</script>
+</html>
